@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnimalShelter.Models;
+@model AnimalShelter.Models.Species;
+
+<h2>Species Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+<ul>
+@if (@Model.Breeds.Count == 0)
+{
+  <p>no breeds found</p>
+}
+
+@foreach (Breeds breed in @Model.Breeds)
+{
+  <li>Description: @breed.AnimalName</li>
+}
+</ul>
+
+<p>@Html.ActionLink("Back to categories", "Index")</p>
+<p>@Html.ActionLink("Edit Species", "Edit", new { id = Model.SpeciesId })</p>
+<p>@Html.ActionLink("Delete Species", "Delete", new { id = Model.SpeciesId })</p>

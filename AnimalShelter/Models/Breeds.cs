@@ -6,5 +6,8 @@ namespace AnimalShelter.Models
     public string AnimalName { get; set; }
     public string Gender {get; set; }
     public string Date {get; set; }
+
+    public int SpeciesId {get; set;}
+    public virtual Species Species {get; set;}
   }
 }

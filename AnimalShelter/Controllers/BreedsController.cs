@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using AnimalShelter.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AnimalShelter.Controllers
 {
@@ -16,7 +18,7 @@ namespace AnimalShelter.Controllers
 
     public ActionResult Index()
     {
-      List<Breeds> model = _db.Breeds.ToList();
+      List<Breeds> model = _db.Breeds.Include(breeds => breeds.Species).ToList();
       return View(model);
     }
 

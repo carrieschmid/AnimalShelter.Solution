@@ -10,7 +10,7 @@
 <ul>
   @foreach(Breeds breed in Model)
   {
-      <li>@Html.ActionLink($"{breed.AnimalName}", "Details", new { id = breed.BreedsId })</li>
+      <li>@Html.ActionLink($"{breed.AnimalName}", "Details", new { id = breed.SpeciesId })| @breed.Species.Name</li>
   }
 </ul>
 
