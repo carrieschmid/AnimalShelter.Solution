@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Animal Shelter Type Details: </h1>
+
+<h2>@Model["breeds"].AnimalName/h2>
+<h3>Species: @Model["species"].Name</h3>
+
+<a href='/species/@Model["species"].Id/breed/new'>Add another animal type.</a>
+<a href='/species'>View all species</a>

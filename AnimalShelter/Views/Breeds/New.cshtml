@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add a new animal breed to @Model.Name</h1>
+
+<form action="/species/@Model.Id/breeds" method="post">
+  <input id="speciesId" name="speciesId" type="hidden" value="@Model.Id">
+  <label for="breedName">type name</label>
+  <input id="breedName" name="breedName" type="text">
+  <button type='submit'>Add type</button>
+</form>

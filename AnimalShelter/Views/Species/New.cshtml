@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add an animal species</h1>
+<p>Add an animal species here:</p>
+
+<form action="/species" method="post">
+  <label for="speciesName">Species name</label>
+  <input id="speciesName" name="speciesName" type="text">
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/species">Back to species.</a></p>
