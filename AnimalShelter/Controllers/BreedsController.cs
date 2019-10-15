@@ -30,6 +30,7 @@ namespace AnimalShelter.Controllers
 
     public ActionResult Create()
     {
+        ViewBag.SpeciesId = new SelectList(_db.Species, "SpeciesId", "Name");
         return View();
     }
 
